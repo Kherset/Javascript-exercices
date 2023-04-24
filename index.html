@@ -7,8 +7,28 @@
   <title>Document</title>
 </head>
 <script>
+  // Debut de l'exercice sur les fonctions "Palindrome"
+  function isPalindrome(string) {
+    reversedMot = string.split('')
+                        .reverse()
+                        .join('');
+    return string.toUpperCase() === reversedMot.toUpperCase()
+  }
 
-  // Debut exercice "Compter la frequence des mots dans une phrase"
+
+  const mots = {
+    kayak: true,
+    SOS: true,
+    Kayak: true,
+    Bonjour: false,
+  }
+  for(let mot in mots) {
+    if(isPalindrome(mot) !== mots[mot]) {
+      console.error(`isPalindrome(${mot}) aurait du renvoyer ${mots[mot]}`)
+    }
+  }
+  // Fin de l'exercice sur les fonctions
+  // Debut de l'exercice sur les fonctions "Compter la frequence des mots dans une phrase"
   const phrase = `Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd'hui avec vous, je dirais que c'est d'abord des rencontres. Des gens qui m'ont tendu la main, peut-être à un moment où je ne pouvais pas, où j'étais seul chez moi. Et c'est assez curieux de se dire que les hasards, les rencontres forgent une destinée. Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l'interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n'est pas mon cas, comme je disais là, puisque moi au contraire, j'ai pu : et je dis merci à la vie, je lui dis merci, je chante la vie, je danse la vie, je ne suis qu'amour. Et finalement, quand beaucoup de gens aujourd'hui me disent « mais comment fais-tu pour avoir cette humanité ? », et bien je leur réponds très simplement, je leur dis que c'est ce`;
   const regex = /[^\w]+/g;
   let frequencies = {}
@@ -37,7 +57,7 @@
   const topTrois = `La frequence des mots qui reviennent le plus souvent sont "${frequenciesArray[0].word}" avec une frequence de ${frequenciesArray[0].count} fois;
 "${frequenciesArray[1].word}" avec une frequence de ${frequenciesArray[1].count} fois;
 "${frequenciesArray[2].word}" avec une frequence de ${frequenciesArray[2].count} fois.`
-  // Fin exercice "Compter les mots dans une phrase"
+  // Fin de l'exercice sur les fonctions "Compter les mots dans une phrase"
 
 </script>
 <body>
