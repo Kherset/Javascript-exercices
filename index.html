@@ -19,6 +19,16 @@
   <!-- <script src="sucre-syntaxique.js"></script> -->
   <!-- <script src="timers.js"></script> -->
   <!-- <script src="promise.js"></script> -->
-  <script src="appel-HTTP-avec-fetch.js"></script>
+  <!-- <script src="appel-HTTP-avec-fetch.js"></script> -->
+  <script type="module">
+    import {sum} from "./_array.js";
+      // Si il y a des conflits entre les noms de variables, on peut les renommer en disant par exemple : sum as somme
+      // On peut faire un gros import de la totalite en notant : import * as A from "./_array.js", mais pas tres conseiller de tout importer
+    console.log(sum([12, 23, 19]))
+
+    // il existe la possibilite de mettre un export en defaut via export default
+
+    // On peut egalement importer de facon asynchrone
+  </script>
 </body>
 </html>
